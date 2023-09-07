@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>yuh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.2">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+
+<body>
+    <div class="full-viewport-shadow"></div>
+  <div class="particle" id="particles-js"></div>
+
+  <div class="nav">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+     
+      <div class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#Me-section">About</a></li>
+          <li><a href="#project-section">Projects</a></li>
+          <li><a href="#about-section">Contact</a></li>
+      </div>
+  </div>
+
+  <main>
+
+      <div class="section" id="home">
+          <img src="logo.png" alt="logo" id="myImage">
+          <div class="container">
+              <div class="intro">
+                  <div class="greeting">Hello there,</div>
+                  <div class="title">I'm Moharaj Oritro.</div>
+                  <div class="subtitle">University Student and Aspiring Developer</div>
+              </div>
+          </div>
+          <section></section>
+          <div class="links-container">
+              <div><a href="https://github.com/Moharaj12" target="blank"><span>Github</span></a></div>
+              <div><a href="https://www.linkedin.com/in/moharaj-oritro-081696181/" target="blank"><span>Linkedin</span></a></div>
+              <div><a href="MoharajDaiyanFinalResume.pdf" target="blank"><span>Resume</span></a></div>
+          </div>
+      </div>
+      <div class="section" id="Me-section">
+        <div class="intro2">
+          <div class="me">ABOUT ME</div>
+         <div data-aos = "fade-left"> 
+          <div class="about1">
+            Hi! I'm Moharaj Oritro, a Fourth-year Computer Science major at 
+            <span class="school-info">
+              Ontario Tech University 
+              <img src="download.png" alt="school" class="school-logo">
+            </div>
+            </span>
+          </div>
+          <div data-aos="fade-right">
+          <div  class="about2">
+            I have a keen interest in both Cybersecurity and Web Development, although I am open to exploring other topics in technology. 
+            I am actively seeking new career opportunities to further hone my skills. </div>
+      
+            <img src="javascript-1.svg" alt="JavaScript" class="skill-logo">
+            <img src="html-1.svg" alt="HTML" class="skill-logo">
+            <img src="css-3.svg" alt="CSS" class="skill-logo">
+            <img src="python-5.svg" alt="Python" class="skill-logo">
+            <img src="react-2.svg" alt="React" class="skill-logo">
+          </div>
+          </div>
+        </div>
+
+        <h3 class ="project"> PROJECT </h3>
+    
+      <div class="section" id="project-section">
+        <div class="project-wrapper">
+          <div class="swiper-container">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+      
+                <div class="swiper-slide"><img src ="AudioWave1.png"></div>
+                <div class="swiper-slide"><img src = "AudioWave2.png"></div>
+                
+              </div>
+    
+              <div class="swiper-pagination"></div>
+            
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>  
+            </div>
+          </div>
+          <div class="project-explanation">
+            <div data-aos="fade-up">
+            <h2 class="explain">Audiowave serves as our personalized version of Spotify, designed to offer an enriched music-listening experience. The platform taps into a comprehensive database of songs through MongoDB, allowing users a wide range of musical choices. With an integrated login feature, Audiowave ensures a tailored experience by saving user preferences and playlists.
+            <div class="tech-used">
+              </div>
+              <h3>Languages Used:</h3>
+              <img src="javascript-1.svg" alt="React" class="tech-icon">
+              <img src="html-1.svg" alt="HTML" class="tech-icon">
+              <img src="css-3.svg" alt="CSS" class="tech-icon">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+        <div class = "section" id = "about-section">
+          <div class ="intro3">
+            <div data-aos ="fade-down"> 
+              <h3> Thank you for your time :D</h3>
+            </div>
+         
+              </div>
+              </div>
+  </main>
+ 
+</script>
+  <script src="script.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>AOS.init(); </script>
+
+  <script> const swiper = new Swiper('.swiper', {
+    // Optional parameters
+
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });</script>
+</body>
+
+</html>

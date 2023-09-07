@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap');
+
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    /* background-color:#F6F8FF; */
+     background-color: #FAF9F6;
+    font-family: JetBrains Mono, monospace;
+   ;
+    display: flex;
+   justify-content: center;
+   align-items: center;   
+ 
+}
+
+
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+body, .nav, .menu {
+    display: flex;
+    justify-content: center;
+        
+    align-items: center;
+}
+
+
+
+.nav {
+    /*change the position to be top left   */
+   
+    top: 10px;
+    right: 0;
+    
+    
+
+    position:  absolute;
+    background-color: #fff
+    ;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 40px;
+    
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow:  hidden;
+    transition: 0.5s;
+
+
+}
+
+.nav input:checked ~ .menu {
+    width: 450px;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #FAF9F6; /*change the color of the menu icon*/
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: #161919;
+}
+
+.nav input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #666;  /*change the color of the menu icon*/
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+    background-color: #c00f0f;
+}
+
+.nav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.nav span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+
+  /* The hover effect and spacing design on the hover links. will come back later to make this dynamic and have the links actually work later   */
+a {
+    background-image: linear-gradient(
+      to right,
+      #c00f0f 50%,
+      #c00f0f 50%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding:  0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+
+  a:before{
+    content: '';
+    background: #c00f0f;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  a:hover {
+   background-position: 0;
+  }
+  
+  a:hover::before{
+    width: 100%;
+  }
+
+
+/* changin the position of the links container */
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    margin : auto;
+    gap: 20px;
+
+    position: absolute;
+    bottom:20px;
+    left: 20px;
+}
+
+/* The container for all the text elements */
+.intro {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -12rem; /* Adjusted to move the text upwards */
+    left: 20px;
+    text-align: center;
+    margin: auto;
+    font-size: 1.5em;  /* Set the default size for contained elements */
+}
+
+/* The main title with the largest font size */
+.title {
+    font-size: 2.5rem; 
+    margin: auto;
+    text-align: center;
+    width: 100%;
+   
+}
+
+
+
+/* The greeting, a smaller font than the subtitle */
+.greeting {
+    font-size: 1.5rem; 
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+/* The subtitle with a medium-sized font */
+.subtitle {
+    font-size: 1.2rem; 
+    padding-top: 4px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+#myImage {
+    position: fixed;
+    top: -10px; 
+    left: 0;
+    width: 8rem;
+    border-radius: 8px;
+}
+
+#particles-js {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FAF9F6;
+    color: #c00f0f;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1; /* Make sure this sits below everything else */
+  }
+  
+
+
+
+  .section {
+    min-height: 110vh;
+    max-width: 100%;
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .intro2 {
+    text-align: center;  /* Center the text */
+    padding: 2rem;
+    max-width: 80%;  /* Adjust to make text spread more or less */
+    margin: auto;  /* Center the container */
+  }
+  
+  .me {
+    font-size: 9vh;  /* Increase the font size */
+    font-weight: bold;
+    
+    margin-bottom: 9vh;  /* Add more space below the title */
+
+  }
+
+  .school-info {
+    display: inline-flex;
+    align-items: center;
+  }
+  .school-logo {
+    background-color: #FAF9F6;
+    height: 6vh;
+    width: auto;
+    margin-left: 8px;
+  }
+  
+  .about1,
+  .about2 {
+    font-size: 20px;
+    line-height: 1.6;  
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;  
+  }
+
+
+  
+  .skills-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-logo {
+    width: 2em;  
+    height: auto; 
+    margin: 1.2rem;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .section {
+    text-align: center;  /* This will center the text inside the section */
+  }
+  
+  .project-title {
+    font-size: 10rem;  /* Increase the font size */
+  }
+  .swiper {
+
+     left: -25rem;
+    width: 850px;
+    height: 500px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+  .swiper-button-prev::after, .swiper-button-next::after {
+    content: "";
+    color: transparent;
+    opacity: 0.5;
+  }
+  
+  .swiper-pagination {
+    bottom: 10px;  /* You can adjust this value as needed */
+  }
+  
+  .swiper-pagination-bullet {
+  
+    background-color: black !important;
+  
+  }
+
+  .project {
+    font-size: 5rem;  /* Increase the font size */
+   text-align: center;
+
+   margin-bottom: -7.5rem;
+  }
+  .explain {
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 80%; /* Limit the width */
+    margin: auto; /* Center it */
+    text-align: justify;
+  }
+  
+  .tech-used {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+  }
+  
+  .tech-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 15px;
+  }
+  
+  .tech-used h3 {
+    margin-top: 15px;
+    margin-right: 20px;
+    text-align: center;
+  }
